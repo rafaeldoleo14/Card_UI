@@ -1,0 +1,82 @@
+.addCard-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 35em;
+  height: 36em;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.184);
+}
+
+.form-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  position: relative;
+  top: -9em;
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.form-container div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-container label{
+  font-size: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form-container input{
+  outline: none;
+  border: none;
+  border: 2px solid #083f90;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form-container div span{
+  color: red;
+}
+
+.form-container .buttons{
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/3;
+  width: 100%;
+  gap: 10px;
+}
+
+.form-container .buttons button{
+  padding: 15px;
+  border: none;
+  color: white;
+  letter-spacing: 1.2px;
+  border-radius: 3px;
+}
+
+.form-container .buttons button:nth-child(1){
+  background-color: #083f90;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.form-container .buttons button:nth-child(2){
+  background-color: red;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.form-container .buttons button:nth-child(1):hover{
+  background-color: #083e90c3;
+}
+
+.form-container .buttons button:nth-child(2):hover{
+  background-color: rgba(255, 0, 0, 0.749);
+}
+
+

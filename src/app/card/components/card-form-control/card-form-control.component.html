@@ -1,0 +1,71 @@
+
+<div class="addCard-container">
+
+  <app-virtual-card
+    [cardNumber]="cardNumber"
+    [date]="date"
+    [cardName]="cardName"
+  >
+  </app-virtual-card>
+
+  <form [formGroup]="cardForm" autocomplete="off" class="form-container">
+
+    <div>
+
+      <label for="tarjeta">Numero de la tarjeta</label>
+      <input formControlName="tarjeta" type="text" id="tarjeta">
+
+      <span *ngIf="cardForm.controls['tarjeta'].getError('required') && cardForm.controls['tarjeta'].touched">Este campo es requerido</span>
+      <span *ngIf="cardForm.controls['tarjeta'].getError('minlength') && cardForm.controls['tarjeta'].touched">Debe tener 16 caracteres</span>
+      <span *ngIf="cardForm.controls['tarjeta'].getError('maxlength') && cardForm.controls['tarjeta'].touched">Debe tener 16 caracteres</span>
+      <span *ngIf="cardForm.controls['tarjeta'].getError('pattern') && cardForm.controls['tarjeta'].touched">Solo debe contener numeros</span>
+
+    </div>
+
+    <div>
+
+      <label for="fecha">Fecha Vencimiento</label>
+      <input formControlName="fecha" type="text" id="fecha" placeholder="MM/YY">
+
+      <span *ngIf="cardForm.controls['fecha'].getError('required') && cardForm.controls['fecha'].touched">Este campo es requerido</span>
+      <span *ngIf="cardForm.controls['fecha'].getError('pattern') && cardForm.controls['fecha'].touched">Formato: mm/yy (1-12 / 22-27)</span>
+
+
+    </div>
+
+    <div>
+
+      <label for="nombre">Nombre Titular</label>
+      <input formControlName="nombre" type="text" id="nombre">
+
+      <span *ngIf="cardForm.controls['nombre'].getError('required') && cardForm.controls['nombre'].touched">Este campo es requerido</span>
+      <span *ngIf="cardForm.controls['nombre'].getError('minlength') && cardForm.controls['nombre'].touched">Debe tener minimo 2 caracteres</span>
+      <span *ngIf="cardForm.controls['nombre'].getError('maxlength') && cardForm.controls['nombre'].touched">Debe tener maximo 20 caracteres</span>
+      <span *ngIf="cardForm.controls['nombre'].getError('pattern') && cardForm.controls['nombre'].touched">Solo debe contener letras</span>
+
+    </div>
+
+    <div>
+      <label *ngIf="!isForEditing" for="cvv">CVV</label>
+      <input formControlName="cvv" type="text" id="cvv" *ngIf="!isForEditing">
+
+      <span *ngIf="cardForm.controls['cvv'].getError('required') && cardForm.controls['cvv'].touched">Este campo es requerido</span>
+      <span *ngIf="cardForm.controls['cvv'].getError('minlength') && cardForm.controls['cvv'].touched">Debe tener 3 caracteres</span>
+      <span *ngIf="cardForm.controls['cvv'].getError('maxlength') && cardForm.controls['cvv'].touched">Debe tener 3 caracteres</span>
+      <span *ngIf="cardForm.controls['cvv'].getError('pattern') && cardForm.controls['cvv'].touched">Solo debe contener numeros</span>
+
+
+    </div>
+
+    <div class="buttons">
+
+      <button *ngIf="!isForEditing" (click)="onCreateCard()">Agregar Tarjeta</button>
+      <button *ngIf="isForEditing" (click)="onUpdateCard()">Editar</button>
+      <button (click)="onCancel()">Cancelar</button>
+
+    </div>
+
+  </form>
+
+
+</div>

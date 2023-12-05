@@ -1,0 +1,48 @@
+@media (max-width: 935px){
+
+  .panel-container{
+    height: auto;
+    flex-direction: column;
+  }
+
+  .panel-container .panel-options{
+    width: 100%;
+    height: 20em;
+  }
+
+  .panel-container .panel-options a{
+    width: 80%;
+
+  }
+
+  .panel-container .panel-options a:hover{
+    transform: translate3d(-20px);
+  }
+
+  .panel-container .panel-options a.active{
+    transform: translate3d(-20px);
+  }
+
+  .panel-container .panel-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 15em 0 0 0;
+  }
+
+}
+
+@media (max-width: 523px){
+
+  .panel-container{
+    gap: 2em;
+  }
+
+  .panel-container .panel-content{
+    height: auto;
+    padding: 0em 0em;
+  }
+}
+

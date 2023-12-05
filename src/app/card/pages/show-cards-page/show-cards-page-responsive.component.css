@@ -1,0 +1,32 @@
+
+@media (max-width: 935px){
+
+  .show-page{
+    position: relative;
+    width: 100vw;
+    top: -5em;
+    padding: 0em 0;
+  }
+
+  .show-page div{
+    width: 90%;
+    gap: 5px;
+  }
+
+}
+
+@media (max-width: 525px){
+
+  .show-page{
+    top: 0;
+  }
+
+}
+
+@media (max-width: 380px){
+
+  .show-page{
+    margin-bottom: 2em;
+  }
+
+}

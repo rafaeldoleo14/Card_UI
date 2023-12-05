@@ -1,0 +1,37 @@
+
+.show-page{
+  padding: 2em 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.show-page div{
+  width: 90%;
+  gap: 5px;
+}
+
+.show-page div h1{
+  text-align: center;
+}
+
+
+tbody td button{
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+tbody td button:nth-child(1){
+  background-color: rgb(40, 122, 150);
+}
+
+tbody td button:nth-child(2){
+  background-color: red;
+}
+
