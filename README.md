@@ -44,6 +44,7 @@ Pasos:
 Notas:
 <ol>
     <li>Les debo el responsive, puede que no se vea muy bien en algunas pantallas</li>
+    <li>hice el deploy del frontend, pero tiene que correr el backend por igual</li>
     <li>No necesita tener Mysql instalado, estoy usando mysql de railway, el proyecto esta conectado a esa base de datos.</li>
 </ol>
 
