@@ -36,12 +36,14 @@ Pasos:
     <li>Descargar proyecto del link del repositorio: https://github.com/rafaeldoleo14/Card_UI.git</li>
     <li>Installar modulos de node: npm install</li>
     <li>Ejecutar comando modo desarrollo: (ng serve) o (npm run start)</li>
+    <li>Tiene que tener el backend corriendo para que todo funcione.</li>
     <li>Inmediatamente lo corra en el puerto que le indique la terminar, podra ver la vista de agregar tarjeta</li>
     <li>Luego ya puedo agregar y ver las tarjetas agregadas.</li>
 </ol>
 
-Nota:
+Notas:
 <ol>
+    <li>Les debo el responsive, puede que no se vea muy bien en algunas pantallas</li>
     <li>No necesita tener Mysql instalado, estoy usando mysql de railway, el proyecto esta conectado a esa base de datos.</li>
 </ol>
 
